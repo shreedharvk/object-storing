@@ -6,7 +6,12 @@ var btn=document.getElementById("btn1");
 btn.addEventListener('click', function() {
     var name1 = name2.value;
     var email1 = email.value;
+    let myobj={
+        name:name1,
+        email:email1
+    };
+    let myobj_seri=JSON.stringify(myobj);
     
-    localStorage.setItem(name1,email1);
+    localStorage.setItem("myObj",myobj_seri);
 
 });
